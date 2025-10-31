@@ -1,0 +1,89 @@
+// Hide Menu Mobile Menu SASS Start
+@media only screen and (max-width:1024px) {
+    header{
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            background-color: white;
+            padding: 30px;
+            min-width: 47vw;
+            transition: 0.2s all linear;
+            z-index: 99;
+            &::before{
+                transition: 0.2s all linear;
+                position: fixed;
+                content: '';
+                top: 0;
+                width: calc(100vw - 50vw);
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,0.5);
+                transform: scale(1);
+
+            }
+            img{
+                width: 100px;
+            }
+            ul{
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+                margin-top: 30px;
+            }
+        }
+    }
+     
+}
+.hide_menu{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+}
+// Hide Menu Mobile Menu SASS End
+
+// Banner SASS Start
+.banners{
+    .items{
+        position: relative;
+        &::before{
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // bottom: 0;
+            // right: 0;
+            // background-color: rgba(255,255,255,0.5);
+            // content: '';
+        }
+    }
+}
+// Banner SASS End
+
+// Form SASS Start
+form{
+    & > div{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 15px;
+        label{
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+            font-weight: 600;
+            color:#292929;
+        }
+        input , textarea{
+            border:1px solid #d8d8d8;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}
+// Form SASS End
