@@ -19,7 +19,7 @@ export default function About() {
         <div className="left_side">
             <p className="px-8 pb-5 lg:text-left text-center">
                 <div className="p-7" >
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal it look like readable English. Many desktop publishing packages and web page editors now use Various versions have evolved over the years, sometimes by accident.
+                    It is a long established fact that a reader for will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal it look like readable English. Many desktop publishing packages and web page editors now use Various versions have evolved over the years, sometimes by accident.
                 <button type='button' className=' bg-transparent lg:mx-0 mx-auto mt-2 text-black border-0 btn btn-secondary' >Read About Us <span className='icon text-black' ><IoIosArrowRoundForward/> </span></button>
                 </div>
                 
