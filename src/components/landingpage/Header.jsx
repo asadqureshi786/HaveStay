@@ -45,13 +45,13 @@ export default function Header() {
             </div>
         </div>
       </div>
-        <div className="container">
+        <div className="container sticky top-0 z-99 bg-white">
             <header className='flex justify-between items-center py-5' >
                 <a href="#" className='' >
-                    <img src={Logo} loading="lazy" width={150} height={120} alt="" />
+                    <img src={Logo} loading="lazy" className='lg:w-40 w-24' width={150} height={120} alt="" />
                 </a>
                 {/* <nav className='lg:block hidden' > */}
-                <nav className={`lg:block ${!showMenu ? "hide_menu" : ""}`}>
+                <nav className={`${!showMenu ? 'hide_menu' : ''}`}>
                     <div className='flex justify-between items-center' >
                         <img src={Logo} className='lg:hidden block' loading="lazy" width={100} height={120} alt="" />
                         <div className='cursor-pointer lg:hidden text-[24px]' onClick={()=> setShowMenu(false)} >
@@ -59,14 +59,15 @@ export default function Header() {
                         </div>
                     </div>
                     <ul className='gap-10 flex justify-between items-center text-[14px]' >
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Rooms</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >Home</a></li>
+                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >About Us</a></li>
+                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >Rooms</a></li>
+                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >Services</a></li>
+                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >News</a></li>
+                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >Contact</a></li>
                     </ul>
                 </nav>
+
 
                <div className='flex items-center gap-3' >
                     <div className="search_icon sm:block hidden bg-secondary w-fit relative py-2 rounded-full ">

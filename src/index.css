@@ -1,10 +1,10 @@
-/* Poppins Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* Montserrat Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Melow Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 :root {
- font-family: "Open Sans", sans-serif;
+ font-family: "Montserrat", sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -24,12 +24,15 @@ p{
 
 
 @theme{
-  --color-primary: #14213d;
+  /* --color-primary: oklch(74% 0.238 322.16); */
+  --color-primary: #A21D84;
   --color-secondary: #e5e5e5;
   --color-webText:#3b3b3b;
+  --color-primaryText:#B09CB0;
 
   /* Fonts */
   --font-melow:"Merienda", cursive;;
+  --font-monst: "Montserrat", sans-serif;
 
   /* BreakPoints */
     --breakpoint-*: initial;
@@ -41,6 +44,22 @@ p{
     --breakpoint-4xl: 1920px;
     --breakpoint-6xl: 2836px;
 }
+
+   h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+        @apply  leading-[1.2];
+    }
+
 @layer components{
   .container {
     @apply px-3 w-full max-w-[100%] sm:max-w-[640px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1300px] 2xl:max-w-[1366px] 4xl:max-w-[1600px] mx-auto;

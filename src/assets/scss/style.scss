@@ -37,11 +37,7 @@
     }
      
 }
-.hide_menu{
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(-100%);
-}
+
 // Hide Menu Mobile Menu SASS End
 
 // Banner SASS Start
@@ -87,3 +83,16 @@ form{
     }
 }
 // Form SASS End
+
+
+
+@media only screen and (max-width:992px){
+    .hide_menu{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+    form > div label{
+        font-size: 13px;
+    }
+}
