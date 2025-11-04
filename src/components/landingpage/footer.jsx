@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../../assets/img/website/logo.png'
 
-export default function footer() {
+export default function Footer() {
   return (
     <footer className='bg-[#7c6280] rounded-t-[40px] text-white py-12 lg:mt-0 mt-15'>
         <div className='container'>
