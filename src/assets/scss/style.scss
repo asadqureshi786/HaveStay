@@ -6,24 +6,24 @@
             top: 0;
             left: 0;
             bottom: 0;
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             background-color: white;
             padding: 30px;
-            min-width: 47vw;
+            min-width: 100vw;
             transition: 0.2s all linear;
             z-index: 99;
-            &::before{
-                transition: 0.2s all linear;
-                position: fixed;
-                content: '';
-                top: 0;
-                width: calc(100vw - 50vw);
-                right: 0;
-                bottom: 0;
-                background-color: rgba(0,0,0,0.5);
-                transform: scale(1);
+            // &::before{
+            //     transition: 0.2s all linear;
+            //     position: fixed;
+            //     content: '';
+            //     top: 0;
+            //     width: calc(100vw - 50vw);
+            //     right: 0;
+            //     bottom: 0;
+            //     background-color: rgba(0,0,0,0.5);
+            //     transform: scale(1);
 
-            }
+            // }
             img{
                 width: 100px;
             }
@@ -85,6 +85,39 @@ form{
 // Form SASS End
 
 
+// Gallery SASS Hover Start
+[data-fancybox="gallery"]{
+    position: relative;
+    .gallery_hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: red;
+        transform: scale(0);
+        transition: transform 0.5s ease;
+
+    }
+    &:hover{
+        .gallery_hover{
+            transform: scale(1);
+            // animation-name: galleryScale;
+                  animation: galleryScale 0.4s ease forwards;
+
+        }
+    }
+}
+@keyframes galleryScale {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+    
+}
+// Gallery SASS Hover End
 
 @media only screen and (max-width:992px){
     .hide_menu{

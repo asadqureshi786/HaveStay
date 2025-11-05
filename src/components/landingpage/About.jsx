@@ -10,6 +10,9 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 export default function About() {
   return (
     <section className="container mt-[105px]">
+
+    
+
       <div className="heading  font-[100] text-[35px] font-melow text-black text-center ">
         <h1> <span className="text-primary">HaveStay:  </span>Your Gateway</h1>
         <h1>To Serenitry</h1>

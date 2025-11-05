@@ -5,6 +5,8 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
 
+import { Link } from 'react-router-dom';
+
 
 // Social
 import { FaFacebookF } from "react-icons/fa";
@@ -36,11 +38,11 @@ export default function Header() {
                     </a>
                 </div>
                 <div className="flex items-center gap-2 md:gap-6 text-primary ">
-                    <a href=""> <FaFacebookF/> </a>
-                    <a href=""> <IoLogoInstagram/> </a>
-                    <a href=""> <FaTwitter/> </a>
-                    <a href=""> <FaLinkedinIn/> </a>
-                    <a href=""> <FaYoutube/> </a>
+                    <a href="#" className='transition duration-75 hover:scale-105' > <FaFacebookF/> </a>
+                    <a href="#" className='transition duration-75 hover:scale-105' > <IoLogoInstagram/> </a>
+                    <a href="#" className='transition duration-75 hover:scale-105' > <FaTwitter/> </a>
+                    <a href="#" className='transition duration-75 hover:scale-105' > <FaLinkedinIn/> </a>
+                    <a href="#" className='transition duration-75 hover:scale-105' > <FaYoutube/> </a>
                 </div>
             </div>
         </div>
@@ -59,18 +61,19 @@ export default function Header() {
                         </div>
                     </div>
                     <ul className='gap-10 flex justify-between items-center text-[14px]' >
-                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >Home</a></li>
-                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >About Us</a></li>
-                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >Rooms</a></li>
-                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >Services</a></li>
-                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >News</a></li>
-                        <li><a href="#" className='text-black  hover:text-primary font-medium transition duration-200' >Contact</a></li>
+                        <li><Link to="" className='text-black  hover:text-primary font-medium transition duration-200' >Home</Link></li>
+                        <li><Link to="about" className='text-black  hover:text-primary font-medium transition duration-200' >About Us</Link></li>
+                        <li><Link to="rooms" className='text-black  hover:text-primary font-medium transition duration-200' >Rooms</Link></li>
+                        <li><Link to="#" className='text-black  hover:text-primary font-medium transition duration-200' >Services</Link></li>
+                        <li><Link to="#" className='text-black  hover:text-primary font-medium transition duration-200' >News</Link></li>
+                        <li><Link to="#" className='text-black  hover:text-primary font-medium transition duration-200' >Contact</Link></li>
                     </ul>
                 </nav>
 
 
                <div className='flex items-center gap-3' >
-                    <div className="search_icon sm:block hidden bg-secondary w-fit relative py-2 rounded-full ">
+                {/* <button className='btn btn-secondary'>Login</button> */}
+                    <div className="search_icon sm:block hidden bg-secondary w-fit relative py-2 rounded-[8px] ">
                         <input type="text" className='focus:outline-0 text-[14px] ps-6 pe-10' placeholder='Search here...' />
                         <span className='absolute top-[50%] translate-y-[-50%] right-[20px] text-[20px] ' ><RiSearchLine /></span>
                     </div>
