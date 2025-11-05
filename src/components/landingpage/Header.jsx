@@ -5,7 +5,7 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
 
-import { Link } from 'react-router-dom';
+import { NavLink  } from 'react-router-dom';
 
 
 // Social
@@ -61,12 +61,12 @@ export default function Header() {
                         </div>
                     </div>
                     <ul className='gap-10 flex justify-between items-center text-[14px]' >
-                        <li><Link to="" className='text-black  hover:text-primary font-medium transition duration-200' >Home</Link></li>
-                        <li><Link to="about" className='text-black  hover:text-primary font-medium transition duration-200' >About Us</Link></li>
-                        <li><Link to="rooms" className='text-black  hover:text-primary font-medium transition duration-200' >Rooms</Link></li>
-                        <li><Link to="#" className='text-black  hover:text-primary font-medium transition duration-200' >Services</Link></li>
-                        <li><Link to="#" className='text-black  hover:text-primary font-medium transition duration-200' >News</Link></li>
-                        <li><Link to="#" className='text-black  hover:text-primary font-medium transition duration-200' >Contact</Link></li>
+                        <li><NavLink  to="" className='text-black  hover:text-primary font-medium transition duration-200' >Home</NavLink></li>
+                        <li><NavLink  to="about" className='text-black  hover:text-primary font-medium transition duration-200' >About Us</NavLink></li>
+                        <li><NavLink  to="rooms" className='text-black  hover:text-primary font-medium transition duration-200' >Rooms</NavLink></li>
+                        <li><NavLink  to="#" className='text-black  hover:text-primary font-medium transition duration-200' >Services</NavLink></li>
+                        <li><NavLink  to="#" className='text-black  hover:text-primary font-medium transition duration-200' >News</NavLink></li>
+                        <li><NavLink  to="#" className='text-black  hover:text-primary font-medium transition duration-200' >Contact</NavLink></li>
                     </ul>
                 </nav>
 

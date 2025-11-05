@@ -11,6 +11,10 @@ import img4 from '../../assets/img/website/rooms/img4.jpg'
 import img5 from '../../assets/img/website/rooms/img5.jpg'
 import img6 from '../../assets/img/website/rooms/img6.jpg'
 
+// Icons
+import { TfiSearch } from "react-icons/tfi";
+
+
 export default function Gallery() {
   var settings = {
      dots: false,
@@ -121,9 +125,12 @@ export default function Gallery() {
         {
             items.map((item,index)=>(
                 <div key={index}  className="" data-fancybox="gallery" href={item.img}  >
-                    <div className="item h-80  w-full object-contain cursor-pointer">
+                    <div className="item h-80 overflow-hidden  w-full  object-contain cursor-pointer">
                         <img src={item.img} className="w-full h-full" />
-                        <div className="gallery_hover" ></div>
+                        <div className="gallery_hover flex justify-center gap-3 flex-col items-center text-5xl">
+                            <span className="text-white" ><TfiSearch/></span>
+                            <span className="text-white text-sm uppercase">Search</span>
+                        </div>
                     </div>
                 </div>
             ))

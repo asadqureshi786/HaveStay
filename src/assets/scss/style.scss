@@ -90,33 +90,37 @@ form{
     position: relative;
     .gallery_hover{
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: red;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: rgba(0,0,0,0.8);
         transform: scale(0);
         transition: transform 0.5s ease;
-
+    }
+    img{
+        transition: transform 0.2s ease;
     }
     &:hover{
+        img{
+            transform: scale(1.1);
+        }
         .gallery_hover{
             transform: scale(1);
-            // animation-name: galleryScale;
-                  animation: galleryScale 0.4s ease forwards;
+            // animation: galleryScale 0.4s ease forwards;
 
         }
     }
 }
-@keyframes galleryScale {
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(0);
-    }
+// @keyframes galleryScale {
+//     0%{
+//         transform: scale(1);
+//     }
+//     100%{
+//         transform: scale(0);
+//     }
     
-}
+// }
 // Gallery SASS Hover End
 
 @media only screen and (max-width:992px){
