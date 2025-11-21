@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Banner1 from '../../assets/img/website/banner1.jpg'
-
-
-
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Banner() {
+  const [checkInDate, setCheckInDate] = useState(null)
+  const [checkOutDate, setCheckOutDate] = useState(null)
+
   return (
    <div className='container'>
 
@@ -25,11 +27,31 @@ export default function Banner() {
                     <form>
                         <div className='fields'>
                             <label>Check In</label>
-                            <input type='date' />
+                            <DatePicker 
+                                selected={checkInDate} 
+                                onChange={(date) => setCheckInDate(date)} 
+                                selectsStart
+                                startDate={checkInDate}
+                                endDate={checkOutDate}
+                                minDate={new Date()}
+                                placeholderText="Select check-in date"
+                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                dateFormat="MM/dd/yyyy"
+                            />
                         </div>
                         <div className='fields'>
                             <label>Check Out</label>
-                            <input type='text' />
+                            <DatePicker 
+                                selected={checkOutDate} 
+                                onChange={(date) => setCheckOutDate(date)} 
+                                selectsEnd
+                                startDate={checkInDate}
+                                endDate={checkOutDate}
+                                minDate={checkInDate || new Date()}
+                                placeholderText="Select check-out date"
+                                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                dateFormat="MM/dd/yyyy"
+                            />
                         </div>
                         <div className='fields'>
                             <label>Room</label>

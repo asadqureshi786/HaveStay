@@ -140,8 +140,12 @@ export default function Gallery() {
         {
             [...items].reverse().map((item,index)=>(
                 <div key={index}  className="" data-fancybox="gallery" href={item.img}  >
-                    <div className="item h-80  w-full object-contain cursor-pointer">
+                    <div className="item h-80  overflow-hidden w-full object-contain cursor-pointer">
                         <img src={item.img} className="w-full h-full" />
+                           <div className="gallery_hover flex justify-center gap-3 flex-col items-center text-5xl">
+                            <span className="text-white" ><TfiSearch/></span>
+                            <span className="text-white text-sm uppercase">Search</span>
+                        </div>
                     </div>
                 </div>
             ))
